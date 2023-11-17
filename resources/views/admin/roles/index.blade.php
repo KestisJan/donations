@@ -5,7 +5,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="flex justify-end p-2">
-                    <a href="{{ route('admin.roles.create') }}" class="px-4 py-2 bg-green-700 hover:bg-green-500 rounded-md">Create Role</a>
+                    <a href="{{ route('admin.roles.create') }}" class="px-4 py-2 bg-green-700 hover:bg-green-500 rounded-md text-white">Create Role</a>
                 </div>
                 <div class="flex flex-col">
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -26,8 +26,12 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="">Edit</a>
-                                            <a href="">Delete</a>
+                                            <div class="flex justify-end">
+                                                <div class="space-x-2">
+                                                    <a href="{{ route('admin.roles.edit', $role->id) }}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Edit</a>
+                                                    <a href="" class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md">Delete</a>
+                                                </div>
+                                            </div>
                                         </td>
                                      </tr>
                                      @endforeach
