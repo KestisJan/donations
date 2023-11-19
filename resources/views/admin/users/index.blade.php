@@ -29,16 +29,14 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="flex justify-end">
-                                                <div class="space-x-2">
-                                                    <a href="#" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Roles</a>
-                                                    <a href="#" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Permissions</a>
+                                            <div class="flex justify-between">
+                                                    <a href="{{ route('admin.users.show', $user->id) }}" 
+                                                    class="px-6 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Roles</a>
                                                     <form method="POST" class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md" action="{{ route('admin.users.destroy', $user->id) }}" onsubmit="return confirm('Are you sure?');">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit">Delete</button>
                                                     </form>
-                                                </div>
                                             </div>
                                         </td>
                                      </tr>
