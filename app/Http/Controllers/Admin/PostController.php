@@ -20,6 +20,11 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
+    public function edit(Post $post)
+    {
+        return view('admin.posts.edit', compact('post'));
+    }
+
     public function store(Request $request)
     {
         $postFields = $request->validate([
@@ -36,5 +41,10 @@ class PostController extends Controller
         Post::create($postFields);
         
        return to_route('admin.posts.index');
+    }
+
+    public function update()
+    {
+        
     }
 }

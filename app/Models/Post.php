@@ -9,6 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
         'title',
         'images',
@@ -17,5 +18,6 @@ class Post extends Model
         'post_like',
         'stories',
         'tags',
+        'status',
     ];
 }

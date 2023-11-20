@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('donation_start')->default(0);
             $table->integer('post_like')->default(0);
             $table->longText('stories');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
