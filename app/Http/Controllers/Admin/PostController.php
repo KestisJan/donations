@@ -43,8 +43,18 @@ class PostController extends Controller
        return to_route('admin.posts.index');
     }
 
-    public function update()
+
+    public function update(Request $request, Post $post)
     {
+        $validated = $request->validate([
+             'title' => 'required',
+             'donation_goal' => 'required',
+             'stories' => 'required',
+            ]);
         
+        $post->update($validated);
+
+        return to_route('admin.posts.index');
     }
+
 }
