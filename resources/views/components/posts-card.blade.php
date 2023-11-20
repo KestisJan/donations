@@ -1,5 +1,6 @@
 @props(['post'])
 <div class="container mx-auto p-4">
+    <img  class="object-cover h-48 w-96" src="{{ asset('storage/' . $post->images) }}"/>
     <h2>Title: {{ $post->title}}</h2>
     <h2>#Hastags: {{ $post->tags}}</h2>
     <h2>Current: {{ $post->donation_start}}$</h2>
