@@ -2,7 +2,7 @@
     <!-- POSTS EDIT -->
     <div class="flex md:container md:mx-auto items-center justify-center">
         <div class="w-1/2">
-            <h1 class="mt-4 text-xl font-medium text-gray-800">Edit Post</h1>
+            <h1 class="mt-4 text-xl font-medium text-gray-800 text-center">Edit Post</h1>
             <form class="mt-5 space-y-6" action="{{route ('admin.posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
