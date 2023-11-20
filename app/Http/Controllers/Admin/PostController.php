@@ -35,6 +35,6 @@ class PostController extends Controller
 
         Post::create($postFields);
         
-        return back();
+       return to_route('admin.posts.index');
     }
 }

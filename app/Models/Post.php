@@ -16,5 +16,6 @@ class Post extends Model
         'donation_start',
         'post_like',
         'stories',
+        'tags',
     ];
 }

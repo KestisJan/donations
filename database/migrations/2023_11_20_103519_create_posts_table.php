@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('tags');
             $table->string('images')->nullable();
-            $table->decimal('donation_goal', 10, 2);
-            $table->decimal('donation_start', 10, 2)->default(0);
-            $table->decimal('post_like', 10)->default(0);
+            $table->integer('donation_goal');
+            $table->integer('donation_start')->default(0);
+            $table->integer('post_like')->default(0);
             $table->longText('stories');
             $table->timestamps();
         });
