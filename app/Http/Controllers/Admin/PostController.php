@@ -20,6 +20,12 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('admin.posts.view', compact('post'));
+    }
+
     public function edit(Post $post)
     {
         return view('admin.posts.edit', compact('post'));
